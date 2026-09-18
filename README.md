@@ -1,7 +1,7 @@
 # IncidentZero Starter Repository
 
-**Assignment 1 - Agentic Artificial Intelligence (Fall 2026)**  
-**Domain:** bounded autonomous SRE / production-incident response  
+**Assignment 1 - Agentic Artificial Intelligence (Fall 2026)**
+**Domain:** bounded autonomous SRE / production-incident response
 **Mode:** individual assignment, plain Python + Groq SDK, no agent framework
 
 This repository deliberately gives you a **working simulated production environment** and an **incomplete agent runtime**. Your job is not to build an API or a dashboard. Your job is to turn the baseline loop into a reliable agent that can observe, plan, act, verify, re-plan, recover from failures, respect human approval, and stop correctly under a strict budget.
@@ -58,11 +58,13 @@ The point is to build a robust **controller**, not to reverse-engineer the answe
 ## Evaluation and Testing Commands
 
 Run full offline test suite (22 unit & scripted tests):
+
 ```bash
 pytest -v tests/public
 ```
 
 Run infrastructure integrity checks:
+
 ```bash
 python scripts/check_protected_integrity.py
 python scripts/check_banned_imports.py
@@ -70,9 +72,9 @@ python scripts/count_todos.py
 ```
 
 Run scenarios with live Groq model:
+
 ```bash
 python -m incidentzero.cli run --student-id 25I-8003 --scenario public-a --auto-approve
 python -m incidentzero.cli run --student-id 25I-8003 --scenario public-b --auto-approve
 python -m incidentzero.cli run --student-id 25I-8003 --scenario public-c --auto-approve
 ```
-
